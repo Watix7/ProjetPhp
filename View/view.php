@@ -30,7 +30,7 @@
                     <a class="nav-link btn btn-custom" href="#">Accueil</a>
                 </li>
                 <li class="nav-item mx-3">
-                    <a class="nav-link btn btn-custom" href="#">Médicament</a>
+                    <a class="nav-link btn btn-custom" href="medic.php">Médicament</a>
                 </li>
                 <li class="nav-item mx-3">
                     <a class="nav-link btn btn-custom" href="#">Activité</a>
