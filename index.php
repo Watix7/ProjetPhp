@@ -1,5 +1,5 @@
 <?php 
-require_once "Model/models.php";
+require_once "Model/model.php";
 require_once "Controller/controller.php";
 
 if ( isset($_POST["actionUser"]))
