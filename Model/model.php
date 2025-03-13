@@ -1,7 +1,7 @@
 <?php
 function insertUser($nom ,$prenom, $mail)
 {
-    $url = 'http://127.0.0.1/Api/api.php';
+    $url = 'http://127.0.0.1/ProjetPhp/Api/api.php';
     $data = array('nom' => $nom, 'prenom' => $prenom ,'mail' => $mail);
 
     $options = array(
@@ -18,9 +18,9 @@ function insertUser($nom ,$prenom, $mail)
         return $result;
 
 }
-function updateUsers($id, $nom , $mail)
+/*function updateUsers($id, $nom , $mail)
 {
-    $url = 'http://127.0.0.1/Api/api.php?id='.$id;
+    $url = 'http://127.0.0.1/ProjetPhp/Api/api.php?id='.$id;
     $data = array( 'nom'=> $nom , 'mail' => $mail);
     $ch = curl_init($url);
     curl_setopt($ch, CURLOPT_RETURNTRANSFER,true );
@@ -37,7 +37,7 @@ function updateUsers($id, $nom , $mail)
 
 function deleteUsers($id)
 {
-    $url = "http://127.0.0.1/Api/api.php?id=".$id;
+    $url = "http://127.0.0.1/ProjetPhp/Api/api.php?id=".$id;
     $ch = curl_init();
     curl_setopt($ch, CURLOPT_URL,$url);
     curl_setopt($ch, CURLOPT_CUSTOMREQUEST,"DELETE");
@@ -47,11 +47,11 @@ function deleteUsers($id)
     curl_close($ch);
 
     return ;a
-}
+}*/
 
 function selectUsers()
 {
-    $url = "http://127.0.0.1/Api/api.php";
+    $url = "http://127.0.0.1/ProjetPhp/Api/api.php";
     $options= array(
         'http'=> array(
             'header' => "Content-type: application/x-www-form-urlencoded\r\n",
