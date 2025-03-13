@@ -1,6 +1,6 @@
 <?php 
-require_once "model/Models.php";
-require_once "controller/controller.php";
+require_once "Model/models.php";
+require_once "Controller/controller.php";
 
 if ( isset($_POST["actionUser"]))
 {
@@ -9,16 +9,16 @@ if ( isset($_POST["actionUser"]))
         addUser();
     }
 
-else 
-if ($_POST["actionUser"]== "modifier")
-{
-    updUser();
-}
-else
-{
-    delUser();
+// else 
+// if ($_POST["actionUser"]== "modifier")
+// {
+//     updUser();
+// }
+// else
+// {
+//     delUser();
 
-}
+// }
 }
 getAllUsers();
 
