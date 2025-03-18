@@ -36,4 +36,10 @@ function getAllMedic()
     $medic = selectUsers();
     include("view/affichemed.php");
 }
+
+function getAllAct()
+{
+    $activity = selectAct();
+    include("view/afficheActi.php");
+}
 ?>

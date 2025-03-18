@@ -14,7 +14,7 @@
                     <a class="nav-link btn btn-custom" href="index.php?action=AM">Médicament</a>
                 </li>
                 <li class="nav-item mx-3">
-                    <a class="nav-link btn btn-custom" href="#">Activité</a>
+                    <a class="nav-link btn btn-custom" href="index.php?action=AA">Activité</a>
                 </li>
                 <li class="nav-item mx-3">
                     <a class="nav-link btn btn-custom" href="#">Page Juridique</a>

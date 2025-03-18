@@ -10,7 +10,11 @@ if ( !isset($_GET["action"]) )
       // cas du formulaire d'ajout
       getAllMedic();
    else
-    if ( $_GET["action"] )
+   if ($_GET["action"] == 'AA')
+      // cas du formulaire d'ajout
+      getAllAct();
+   else 
+   if ( $_GET["action"] )
     getAllUsers();
  else
 ?>

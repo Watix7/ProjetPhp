@@ -62,4 +62,18 @@ $user = file_get_contents($url, false, $context);
 return $user;
 
 }
+
+function selectAct()
+{
+    $url = "http://127.0.0.1/ProjetPhp/Api/api_activite.php";
+    $options= array(
+        'http'=> array(
+            'header' => "Content-type: application/x-www-form-urlencoded\r\n",
+            'method' => 'GET'));
+
+$context = stream_context_create($options);
+$user = file_get_contents($url, false, $context);
+return $user;
+
+}
 ?>
