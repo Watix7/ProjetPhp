@@ -10,7 +10,7 @@
 <div class="jumbotron" style="background-color: rgba(199, 230, 168, 0.9); color: black; height: 150px;">
     <div class="d-flex align-items-center justify-content-between">
         <!-- Logo -->
-        <img src="logo2.png" alt="Logo" style="height: 100px; margin-right: 15px;">
+        <img src="logo.png" alt="Logo" style="height: 100px; margin-right: 15px;">
         <!-- Titre -->
         <h1 class="mx-auto" style="margin: 0;">Bienvenue sur GSB !</h1>
     </div>
@@ -99,73 +99,6 @@
         </div>
     </div>
 </div>
-
-
-<div id="carouselCards" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-inner">
-        <!-- Premier élément du carrousel (Active) -->
-        <div class="carousel-item active">
-            <div class="container d-flex justify-content-center">
-                <div class="row">
-                    <div class="col-md-12 d-flex justify-content-center">
-                        <div class="card text-center" style="width: 18rem;">
-                            <div class="card-body">
-                                <h3>💊 Médicament</h3>
-                                <p class="card-text">Découvrez les informations sur les médicaments et leur utilisation.</p>
-                                <a href="#" class="btn btn-primary">En savoir plus</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Deuxième élément du carrousel -->
-        <div class="carousel-item">
-            <div class="container d-flex justify-content-center">
-                <div class="row">
-                    <div class="col-md-12 d-flex justify-content-center">
-                        <div class="card text-center" style="width: 18rem;">
-                            <div class="card-body">
-                                <h3>🏃 Activités</h3>
-                                <p class="card-text">Découvrez les différentes activités à faire dans votre région.</p>
-                                <a href="#" class="btn btn-primary">En savoir plus</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Troisième élément du carrousel -->
-        <div class="carousel-item">
-            <div class="container d-flex justify-content-center">
-                <div class="row">
-                    <div class="col-md-12 d-flex justify-content-center">
-                        <div class="card text-center" style="width: 18rem;">
-                            <div class="card-body">
-                                <h3>⚖️ Juridique</h3>
-                                <p class="card-text">Accédez à des informations légales pour vous protéger.</p>
-                                <a href="#" class="btn btn-primary">En savoir plus</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Contrôles du carrousel -->
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselCards" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselCards" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-    </button>
-</div>
-
 
 
     <!-- Footer -->
