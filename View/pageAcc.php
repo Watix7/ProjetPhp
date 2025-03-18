@@ -22,45 +22,7 @@
 include('menu.php');
 ?>
 
-<style>
-    .navbar-light .navbar-nav .nav-link {
-        color: #333;
-        font-weight: bold;
-        font-size: 1rem;
-    }
 
-    .navbar-light .navbar-nav .nav-link:hover {
-        background-color: #7ed957;
-        color: white;
-        border-radius: 30px;
-    }
-
-    .navbar-light .navbar-toggler-icon {
-        background-color: #7ed957; 
-    }
-
-    .btn-custom {
-        background-color: #7ed957;
-        color: white;
-        border: none;
-        padding: 10px 20px;
-        border-radius: 30px;
-        font-size: 1rem;
-        font-weight: bold;
-        transition: all 0.3s ease-in-out;
-    }
-
-    .btn-custom:hover {
-        background-color: #4CAF50;
-        transform: translateY(-5px);
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    }
-
-    .btn-custom:active {
-        transform: translateY(0);
-        box-shadow: none;
-    }
-</style>
 
 
 

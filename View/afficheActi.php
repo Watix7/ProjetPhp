@@ -16,24 +16,7 @@
 <?php
 include('menu.php');
 ?>
-<style>
-    .btn-custom {
-        background-color: #7ed957;
-        color: white;
-        border: none;
-        padding: 10px 20px;
-        border-radius: 30px;
-        font-size: 1rem;
-        font-weight: bold;
-        transition: all 0.3s ease-in-out;
-    }
 
-    .btn-custom:hover {
-        background-color: #4CAF50;
-        transform: translateY(-5px);
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    }
-</style>
 
 <div class="container mt-5">
     <div class="row">
@@ -50,8 +33,10 @@ include('menu.php');
                         echo '<p><strong>description :</strong> ' . $medicament["description"] . '</p>';
                         echo '<p><strong>date :</strong> ' . $medicament["date_activite"] . '</p>';
                         echo '</div>';
+                        echo '<input type="submit" name="addAct" value="S\'inscrire">';
                         echo '</div>';
                     }
+                   
                     echo '</div>';
                 ?>
             </div>
