@@ -15,19 +15,19 @@ switch($_request_method)
         }
         break;
 
-    // case 'POST':
-    //     AddInscription();
-    //     break;
+    case 'POST':
+        AddInscription();
+        break;
 
-    // case 'PUT':
-    //     $id = intval($_GET["id"]);
-    //     updateUsers($id);
-    //     break;
+    case 'PUT':
+        $id = intval($_GET["id"]);
+        updateUsers($id);
+        break;
 
-    // case 'DELETE':
-    //     $id = intval($_GET["id"]);
-    //     deleteUsers($id);
-    //     break;
+    case 'DELETE':
+        $id = intval($_GET["id"]);
+        deleteUsers($id);
+        break;
 default :
 header("HTTP/1.0 405 Methid Not Allowed");
 break;
@@ -71,30 +71,32 @@ echo json_encode($response, JSON_PRETTY_PRINT);
 
 }
 
-//  function AddInscription()
-//  {
-    //  global $conn;
-    // $nom = $_POST["nom"];
-    // $mail = $_POST["mail"];
-    // echo $query= "INSERT INTO users(nom , mail) VALUES('".$nom."','".$mail."')";
-    // $conn ->query ("SET NAMES UTF8");
-    // if($conn->query($query))
-    // {
-   //      $response=array(
-   //         'status'=> 1,
-   //          'status_message' =>'etudiant mis a jour avec succès.');
-//
-   //  }
-  //   else
-     //{
-     //    $response=array(
-     //        'status' => 0,
-    //         'status_message' => 'Echec de mise a jour');
-        
-   //  }
-    // header('Content-Type: application/json');
-    // echo json_encode($response);
+ function AddInscription()
+ {
+     global $conn;
+    $nom = $_POST["nom"];
+    $prenom = $_POST["prenom"];
+    $mail = $_POST["mail"];
+    echo $query= "INSERT INTO utilisateurs(nom, prenom, mail) VALUES('".$nom."','".$prenom."''".$mail."')";
+    $conn ->query ("SET NAMES UTF8");
+    if($conn->query($query))
+    {
+        $response=array(
+           'status'=> 1,
+            'status_message' =>'Inscription mis a jour avec succès.');
 
+    }
+    else
+     {
+        $response=array(
+            'status' => 0,
+            'status_message' => 'Echec de mise a jour');
+        
+    }
+    header('Content-Type: application/json');
+    echo json_encode($response);
+
+ }
 
 // }
 
