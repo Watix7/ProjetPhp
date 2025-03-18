@@ -33,7 +33,6 @@ include('menu.php');
                         echo '<p><strong>description :</strong> ' . $medicament["description"] . '</p>';
                         echo '<p><strong>date :</strong> ' . $medicament["date_activite"] . '</p>';
                         echo '</div>';
-                        echo '<input type="submit" name="addAct" value="S\'inscrire">';
                         echo '</div>';
                     }
                    
@@ -43,6 +42,31 @@ include('menu.php');
         </div>
     </div>
 </div>
+<?php
+    $string_decode = json_decode($activity, true);
+    echo '<select name="activity" id="activity" class="form-control">';
+    echo '<option value="" disabled selected>Choisir une activité</option>'; // Option par défaut
+
+    foreach ($string_decode as $medicament) {
+        // On affiche l'ID de l'activité comme valeur de l'option
+        echo '<option value="' . $medicament["id"] . '">' . $medicament["nom"] . '</option>';
+    }
+
+    echo '</select>';
+?>
+
+<form action="in" method="post">
+    <label for="nom">Nom:</label>
+    <input type="text" id="nom" name="nom" required><br><br>
+
+    <label for="prenom">Prénom:</label>
+    <input type="text" id="prenom" name="prenom" required><br><br>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required><br><br>
+
+    <input type="submit" value="Envoyer">
+</form>
 
 <footer class="bg-light text-center p-3 mt-5">
     <p>&copy; 2025 GSB. Projet MVC.</p>
