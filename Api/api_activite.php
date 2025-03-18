@@ -73,7 +73,7 @@ echo json_encode($response, JSON_PRETTY_PRINT);
 
  function AddInscription()
  {
-     global $conn;
+    global $conn;
     $nom = $_POST["nom"];
     $mail = $_POST["mail"];
     echo $query= "INSERT INTO users(nom , mail) VALUES('".$nom."','".$mail."')";

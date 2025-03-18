@@ -17,7 +17,6 @@ if ( !isset($_GET["action"]) )
    else
    if ($_GET["action"] == 'in')
       // s'inscris a un activité
-      
       AddInscription();
    else 
    if ( $_GET["action"] )
