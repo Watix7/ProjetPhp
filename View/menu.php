@@ -17,7 +17,7 @@
                     <a class="nav-link btn btn-custom" href="index.php?action=AA">Activité</a>
                 </li>
                 <li class="nav-item mx-3">
-                    <a class="nav-link btn btn-custom" href="#">Page Juridique</a>
+                    <a class="nav-link btn btn-custom" href="index.php?action=AJ">Page Juridique</a>
                 </li>
             </ul>
         </div>

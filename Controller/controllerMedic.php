@@ -26,8 +26,13 @@ function delUser()
 
 function getAllUsers()
 {
-    $medic = selectUsers();
     include("view/pageAcc.php");
+
+}
+
+function afficheJuridique()
+{
+    include("view/pageLeg.php");
 
 }
 

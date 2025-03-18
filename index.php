@@ -13,6 +13,10 @@ if ( !isset($_GET["action"]) )
    if ($_GET["action"] == 'AA')
       // cas du formulaire d'ajout
       getAllAct();
+      else
+   if ($_GET["action"] == 'AJ')
+      // cas du formulaire d'ajout
+      afficheJuridique();
    else 
    if ( $_GET["action"] )
     getAllUsers();
