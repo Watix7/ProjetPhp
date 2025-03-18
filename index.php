@@ -7,16 +7,18 @@ if ( !isset($_GET["action"]) )
    getAllUsers();
  else
    if ($_GET["action"] == 'AM')
-      // cas du formulaire d'ajout
       getAllMedic();
    else
    if ($_GET["action"] == 'AA')
-      // cas du formulaire d'ajout
       getAllAct();
-      else
+   else
    if ($_GET["action"] == 'AJ')
-      // cas du formulaire d'ajout
       afficheJuridique();
+   else
+   if ($_GET["action"] == 'in')
+      // s'inscris a un activité
+      
+      AddInscription();
    else 
    if ( $_GET["action"] )
     getAllUsers();
