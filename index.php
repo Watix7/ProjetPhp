@@ -2,24 +2,15 @@
 require_once "Model/model.php";
 require_once "Controller/controllerMedic.php";
 
-if ( isset($_POST["actionUser"]))
-{
-    if ($_POST ["actionUser"]== "inscrire")
-    {
-        addUser();
-    }
-
-// else 
-// if ($_POST["actionUser"]== "modifier")
-// {
-//     updUser();
-// }
-// else
-// {
-//     delUser();
-
-// }
-}
-getAllUsers();
-
+if ( !isset($_GET["action"]) )
+   // cas de la consultation : page de départ
+   getAllUsers();
+ else
+   if ($_GET["action"] == 'AM')
+      // cas du formulaire d'ajout
+      getAllMedic();
+   else
+    if ( $_GET["action"] )
+    getAllUsers();
+ else
 ?>

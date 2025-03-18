@@ -17,10 +17,10 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Accueil</a>
+                    <a class="nav-link" href="index.php?action=action">Accueil</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Médicament</a>
+                    <a class="nav-link" href="index?action=AM">Médicament</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Activité</a>
