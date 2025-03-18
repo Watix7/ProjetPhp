@@ -26,6 +26,6 @@ function delUser()
 function getAllUsers()
 {
     $medic = selectUsers();
-    include("view/view.php");
+    include("view/medic.php");
 }
 ?>

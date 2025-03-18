@@ -11,7 +11,7 @@ switch($_request_method)
         }
         else
         {
-            getMedic();
+            getMedics();
         }
         break;
 
@@ -34,7 +34,7 @@ break;
 
 }
 
-function getMedic()
+function getMedics()
 {
     global $conn;
     $query = "SELECT * FROM medicaments";
@@ -47,17 +47,17 @@ function getMedic()
         $response[] = $row;
     }
 $result->closeCursor();
-header('Content-Type: applicartio/json');
+header('Content-Type: application/json');
 echo json_encode($response, JSON_PRETTY_PRINT);
 
 }
-function getMedics($id=0)
+function getMedic($id=0)
 {
     global $conn;
     $query = "SELECT * FROM medicaments";
     if ($id !=0)
     {
-        $query.= " WHERE id=".$id." LIMIT 1";
+        $query= "WHERE id=".$id." LIMIT 1";
     }
 $conn->query("SET NAMES UTF8").
 $result = $conn->query($query);

@@ -62,3 +62,4 @@ $user = file_get_contents($url, false, $context);
 return $user;
 
 }
+?>
