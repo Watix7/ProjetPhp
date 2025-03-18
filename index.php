@@ -1,6 +1,6 @@
 <?php 
 require_once "Model/model.php";
-require_once "Controller/controller.php";
+require_once "Controller/controllerMedic.php";
 
 if ( isset($_POST["actionUser"]))
 {

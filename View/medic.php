@@ -35,7 +35,7 @@
 
 <?php
     $string_decode=json_decode($medic, true);
-    var_dump($medic);
+    
 
     for ($i = 0; $i < count($string_decode); $i++) {
         echo '<div>';

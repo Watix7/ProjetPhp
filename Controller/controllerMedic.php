@@ -1,6 +1,7 @@
 <?php
 function addUser()
 {
+    $medic= $_POST["id"];
     $nom = $_POST["nom"];
     $mail = $_POST["mail"];
     $prenom= $_POST["prenom"];
