@@ -19,15 +19,15 @@ switch($_request_method)
         AddInscription();
         break;
 
-    case 'PUT':
-        $id = intval($_GET["id"]);
-        updateUsers($id);
-        break;
+    // case 'PUT':
+    //     $id = intval($_GET["id"]);
+    //     updateUsers($id);
+    //     break;
 
-    case 'DELETE':
-        $id = intval($_GET["id"]);
-        deleteUsers($id);
-        break;
+    // case 'DELETE':
+    //     $id = intval($_GET["id"]);
+    //     deleteUsers($id);
+    //     break;
 default :
 header("HTTP/1.0 405 Methid Not Allowed");
 break;
@@ -71,56 +71,34 @@ echo json_encode($response, JSON_PRETTY_PRINT);
 
 }
 
- function AddInscription()
- {
-<<<<<<< HEAD
-     global $conn;
-    $nom = $_POST["nom"];
-    $prenom = $_POST["prenom"];
-    $mail = $_POST["mail"];
-    echo $query= "INSERT INTO utilisateurs(nom, prenom, mail) VALUES('".$nom."','".$prenom."''".$mail."')";
-=======
+function AddInscription()
+{
     global $conn;
     $nom = $_POST["nom"];
+    $prenom = $_POST["prenom"];  // Ajouté pour correspondre à ta table utilisateurs
     $mail = $_POST["mail"];
-    echo $query= "INSERT INTO users(nom , mail) VALUES('".$nom."','".$mail."')";
->>>>>>> 2424e9dda28e25666edba61b2e0bae52eb6fb349
-    $conn ->query ("SET NAMES UTF8");
-    if($conn->query($query))
-    {
-        $response=array(
-           'status'=> 1,
-<<<<<<< HEAD
-            'status_message' =>'Inscription mis a jour avec succès.');
-=======
-            'status_message' =>'etudiant mis a jour avec succès.');
 
-    }
-    else
-     {
-        $response=array(
+    // Correction de la requête SQL (manquait une virgule)
+    $query = "INSERT INTO utilisateurs(nom, prenom, mail) VALUES('$nom', '$prenom', '$mail')";
+
+    $conn->query("SET NAMES UTF8");
+
+    if ($conn->query($query)) {
+        $response = array(
+            'status' => 1,
+            'status_message' => 'Inscription mise à jour avec succès.'
+        );
+    } else {
+        $response = array(
             'status' => 0,
-            'status_message' => 'Echec de mise a jour');
-        
+            'status_message' => 'Échec de la mise à jour.'
+        );
     }
+
     header('Content-Type: application/json');
     echo json_encode($response);
->>>>>>> 2424e9dda28e25666edba61b2e0bae52eb6fb349
-
-    }
-    else
-     {
-        $response=array(
-            'status' => 0,
-            'status_message' => 'Echec de mise a jour');
-        
-    }
-    header('Content-Type: application/json');
-    echo json_encode($response);
-
- }
-
 }
+
 
 // function deleteUsers($id)
 // {
