@@ -9,7 +9,7 @@
 <body>
 <div class="jumbotron" style="background-color: rgba(199, 230, 168, 0.9); color: black; height: 150px;">
     <div class="d-flex align-items-center justify-content-between">
-        <img src="logo.png" alt="Logo" style="height: 100px; margin-right: 15px;">
+        <img src="View/logo.png" alt="logo" style="height: 100px; margin-right: 15px;">
         <h1 class="mx-auto" style="margin: 0;">Bienvenue sur GSB !</h1>
     </div>
 </div>
@@ -72,7 +72,7 @@ include('menu.php');
                         <input type="email" class="form-control" id="email" name="mail" required>
                     </div>
 
-                    <button type="submit" class="btn w-100 text-white" style="background: linear-gradient(to right, #28a745, #007bff); border: none;">
+                    <button type="submit" class="btn w-100 text-white" style="background: linear-gradient(to right,rgb(78, 252, 43),rgb(5, 173, 240)); border: none;">
     Envoyer
 </button>
 

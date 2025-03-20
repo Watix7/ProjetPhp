@@ -9,7 +9,7 @@
 <body>
 <div class="jumbotron" style="background-color: rgba(199, 230, 168, 0.9); color: black; height: 150px;">
     <div class="d-flex align-items-center justify-content-between">
-        <img src="logo.png" alt="Logo" style="height: 100px; margin-right: 15px;">
+        <img src="View/logo.png" alt="logo" style="height: 100px; margin-right: 15px;">
         <h1 class="mx-auto" style="margin: 0;">Bienvenue sur GSB !</h1>
     </div>
 </div>
@@ -37,7 +37,41 @@ include('menu.php');
                     }
                     echo '</div>';
                 ?>
+                <?php
+                    echo'<div class="flex-container">';
+                    $string_decode = json_decode($medic, true);
+                    echo '<select name="activity" id="activity" class="form-control">';
+                    echo '<option value="" disabled selected>Choisir un Medicament</option>'; // Option par défaut
+
+                    foreach ($string_decode as $medicament) {
+                        // On affiche l'ID de l'activité comme texte visible à côté du nom
+                        echo '<option value="' . $medicament["idA"] . '">' . $medicament["idA"] . ' - ' . $medicament["nom"] . '</option>';
+                    }
+
+                    echo '</select>';
+                    $string_decode = json_decode($medic, true);
+                    echo '<select name="activity" id="activity" class="form-control">';
+                    echo '<option value="" disabled selected>Choisir un Medicament</option>'; // Option par défaut
+
+                    foreach ($string_decode as $medicament) {
+                        // On affiche l'ID de l'activité comme texte visible à côté du nom
+                        echo '<option value="' . $medicament["idA"] . '">' . $medicament["idA"] . ' - ' . $medicament["nom"] . '</option>';
+                    }
+                    echo'</div>';
+                    echo '</select>';
+                    ?>
+                <button type="submit" class="btn w-100 text-white" style="background: linear-gradient(to right,rgb(78, 252, 43),rgb(5, 173, 240)); border: none;">
+                    Voir les effets
+                </button>
+                <style>
+                .flex-container {
+                display: flex;
+                gap: 10px; /* Espacement entre les éléments */
+               }
+               </style>
+
             </div>
+            
         </div>
     </div>
 </div>
