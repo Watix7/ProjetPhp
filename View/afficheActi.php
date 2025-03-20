@@ -30,12 +30,11 @@ include('menu.php');
                         echo '<div class="col-md-4">';
                         echo '<div class="card mb-4 shadow-sm p-3">';
                         echo '<h5 class="card-title">' . $medicament["nom"] . '</h5>';
-                        echo '<p><strong>description :</strong> ' . $medicament["description"] . '</p>';
-                        echo '<p><strong>date :</strong> ' . $medicament["date_activite"] . '</p>';
+                        echo '<p><strong>Description :</strong> ' . $medicament["description"] . '</p>';
+                        echo '<p><strong>Date :</strong> ' . $medicament["date_activite"] . '</p>';
                         echo '</div>';
                         echo '</div>';
                     }
-                   
                     echo '</div>';
                 ?>
             </div>
@@ -55,7 +54,7 @@ include('menu.php');
     echo '</select>';
 ?>
 
-<form action="in" method="post">
+<form action="index.php?action=in" method="post">
     <label for="nom">Nom:</label>
     <input type="text" id="nom" name="nom" required><br><br>
 
@@ -63,10 +62,11 @@ include('menu.php');
     <input type="text" id="prenom" name="prenom" required><br><br>
 
     <label for="email">Email:</label>
-    <input type="email" id="email" name="email" required><br><br>
+    <input type="email" id="email" name="mail" required><br><br>
 
     <input type="submit" value="Envoyer">
 </form>
+
 
 <footer class="bg-light text-center p-3 mt-5">
     <p>&copy; 2025 GSB. Projet MVC.</p>

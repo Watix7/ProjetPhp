@@ -18,7 +18,7 @@ switch($_request_method)
     case 'POST':
         AddInscription();
         break;
-
+        
     // case 'PUT':
     //     $id = intval($_GET["id"]);
     //     updateUsers($id);

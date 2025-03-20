@@ -1,13 +1,14 @@
 <?php
-function addAcct()
+function addUsers()
 {
     $nom = $_POST["nom"];
-    $mail = $_POST["mail"];
-    $prenom= $_POST["prenom"];
+    $prenom = $_POST["prenom"];
+    $mail= $_POST["mail"];
     insertUser($nom,$prenom,$mail);
+    $activity = selectAct();
+    include("view/afficheActi.php");
     
 }
-
 /*function updUser()
 {
     $user= $_POST["id"];

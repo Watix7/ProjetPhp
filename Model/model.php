@@ -1,7 +1,7 @@
 <?php
 function insertUser($nom ,$prenom, $mail)
 {
-    $url = 'http://127.0.0.1/ProjetPhp/Api/api.php';
+    $url = 'http://127.0.0.1/ProjetPhp/Api/api_activite.php';
     $data = array('nom' => $nom, 'prenom' => $prenom ,'mail' => $mail);
 
     $options = array(

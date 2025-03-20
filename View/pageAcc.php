@@ -22,10 +22,6 @@
 include('menu.php');
 ?>
 
-
-
-
-
     <div class="container mt-5" style="padding: 1rem;">
     <div class="row">
         <div class="col-12">
