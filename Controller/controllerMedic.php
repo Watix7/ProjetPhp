@@ -5,6 +5,7 @@ function addUsers()
     $prenom = $_POST["prenom"];
     $mail= $_POST["mail"];
     insertUser($nom,$prenom,$mail);
+
     $activity = selectAct();
     include("view/afficheActi.php");
     

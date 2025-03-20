@@ -37,35 +37,55 @@ include('menu.php');
                     }
                     echo '</div>';
                 ?>
+                
+
+                <br>
+                <form id="inscriptionForm" action="index.php?action=in" method="post" class="p-4 border rounded bg-white mb-4">
+                    <h3 class="text-center mb-3">Inscription</h3>
+
+                    <?php
+                    $string_decode = json_decode($activity, true);
+                    echo '<select name="activity" id="activity" class="form-control">';
+                    echo '<option value="" disabled selected>Choisir une activité</option>'; // Option par défaut
+
+                    foreach ($string_decode as $medicament) {
+                        // On affiche l'ID de l'activité comme valeur de l'option
+                        echo '<option value="' . $medicament["id"] . '">' . $medicament["nom"] . '</option>';
+                    }
+
+                    echo '</select>';
+                    ?>
+                    <br>
+                    <div class="mb-3">
+                        <label for="nom" class="form-label">Nom :</label>
+                        <input type="text" class="form-control" id="nom" name="nom" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="prenom" class="form-label">Prénom :</label>
+                        <input type="text" class="form-control" id="prenom" name="prenom" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email :</label>
+                        <input type="email" class="form-control" id="email" name="mail" required>
+                    </div>
+
+                    <button type="submit" class="btn w-100 text-white" style="background: linear-gradient(to right, #28a745, #007bff); border: none;">
+    Envoyer
+</button>
+
+                </form>
+
+                <!-- Zone pour afficher le message de retour -->
+                <div id="message" class="mt-3"></div>
+
             </div>
         </div>
     </div>
 </div>
-<?php
-    $string_decode = json_decode($activity, true);
-    echo '<select name="activity" id="activity" class="form-control">';
-    echo '<option value="" disabled selected>Choisir une activité</option>'; // Option par défaut
 
-    foreach ($string_decode as $medicament) {
-        // On affiche l'ID de l'activité comme valeur de l'option
-        echo '<option value="' . $medicament["id"] . '">' . $medicament["nom"] . '</option>';
-    }
 
-    echo '</select>';
-?>
-
-<form action="index.php?action=in" method="post">
-    <label for="nom">Nom:</label>
-    <input type="text" id="nom" name="nom" required><br><br>
-
-    <label for="prenom">Prénom:</label>
-    <input type="text" id="prenom" name="prenom" required><br><br>
-
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="mail" required><br><br>
-
-    <input type="submit" value="Envoyer">
-</form>
 
 
 <footer class="bg-light text-center p-3 mt-5">
@@ -75,3 +95,5 @@ include('menu.php');
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
+
