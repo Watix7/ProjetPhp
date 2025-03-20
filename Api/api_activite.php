@@ -18,7 +18,7 @@ switch($_request_method)
     case 'POST':
         AddInscription();
         break;
-        
+
     // case 'PUT':
     //     $id = intval($_GET["id"]);
     //     updateUsers($id);
@@ -99,6 +99,33 @@ function AddInscription()
     echo json_encode($response);
 }
 
+function AddIns()
+{
+    global $conn;
+    $nom = $_POST["nom"];
+    $prenom = $_POST["prenom"];  // Ajouté pour correspondre à ta table utilisateurs
+    $mail = $_POST["mail"];
+
+    // Correction de la requête SQL (manquait une virgule)
+    $query = "INSERT INTO utilisateurs(nom, prenom, mail) VALUES('$nom', '$prenom', '$mail')";
+
+    $conn->query("SET NAMES UTF8");
+
+    if ($conn->query($query)) {
+        $response = array(
+            'status' => 1,
+            'status_message' => 'Inscription mise à jour avec succès.'
+        );
+    } else {
+        $response = array(
+            'status' => 0,
+            'status_message' => 'Échec de la mise à jour.'
+        );
+    }
+
+    header('Content-Type: application/json');
+    echo json_encode($response);
+}
 
 // function deleteUsers($id)
 // {

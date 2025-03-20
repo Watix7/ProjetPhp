@@ -49,12 +49,13 @@ include('menu.php');
                     echo '<option value="" disabled selected>Choisir une activité</option>'; // Option par défaut
 
                     foreach ($string_decode as $medicament) {
-                        // On affiche l'ID de l'activité comme valeur de l'option
-                        echo '<option value="' . $medicament["id"] . '">' . $medicament["nom"] . '</option>';
+                        // On affiche l'ID de l'activité comme texte visible à côté du nom
+                        echo '<option value="' . $medicament["idA"] . '">' . $medicament["idA"] . ' - ' . $medicament["nom"] . '</option>';
                     }
 
                     echo '</select>';
                     ?>
+
                     <br>
                     <div class="mb-3">
                         <label for="nom" class="form-label">Nom :</label>
