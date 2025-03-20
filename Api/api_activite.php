@@ -77,9 +77,12 @@ function AddInscription()
     $nom = $_POST["nom"];
     $prenom = $_POST["prenom"];  // Ajouté pour correspondre à ta table utilisateurs
     $mail = $_POST["mail"];
+    date_default_timezone_set("UTC");
+    $date = date("Y-m-d H:i:s");
+    $idA = $_POST["idA"];
 
     // Correction de la requête SQL (manquait une virgule)
-    $query = "INSERT INTO utilisateurs(nom, prenom, mail) VALUES('$nom', '$prenom', '$mail')";
+    $query = "INSERT INTO inscription(nom, prenom, mail, date_Ins, idA) VALUES('$nom', '$prenom', '$mail','$date','$idA')";
 
     $conn->query("SET NAMES UTF8");
 
@@ -102,6 +105,7 @@ function AddInscription()
 function AddIns()
 {
     global $conn;
+    $
     $nom = $_POST["nom"];
     $prenom = $_POST["prenom"];  // Ajouté pour correspondre à ta table utilisateurs
     $mail = $_POST["mail"];
@@ -127,57 +131,3 @@ function AddIns()
     echo json_encode($response);
 }
 
-// function deleteUsers($id)
-// {
-// global $conn;
-// $query = " DELETE  FROM users WHERE id=".$id;
-// $conn ->query("SET NAMES UTF8");
-// if ($conn->query($query))
-// {
-//     $response=array(
-//         'status'=> 1,
-//         'status_message' => 'etudiant supprimé avec succès'
-//     );
-
-// }
-// else
-// {
-//     $response=array(
-//         'status' => 0,
-//         'status_message' => ' La suppression du user a echoué'. mysqli_error($conn)
-
-//     );
-
-// }
-// header('Content_Type: application/json');
-// echo json_encode($response);
-
-// }
-
-// function updateUsers($id)
-// {
-//     global $conn;
-
-//     $_PUT = array();
-//     parse_str(file_get_contents("php://input"), $_PUT);
-    
-//     $nom = $_PUT["nom"];
-//     $mail = $_PUT["mail"];
-
-//     $query = "UPDATE users SET nom='".$nom."', mail='".$mail."' WHERE id=".$id;
-//     $conn->query("SET NAMES utf8");
-
-//     if ($conn->query($query)) {
-//         $response = array(
-//             'status' => 1,
-//             'status_message' => 'Jeu mis à jour avec succès'
-//         );
-//     } else {
-//         $response = array(
-//             'status' => 0,
-//             'status_message' => 'Échec de la mise à jour du jeu. '
-//         );
-//     }
-//     header('Content-Type: application/json');
-//     echo json_encode($response);
-// }

@@ -10,20 +10,6 @@ function addUsers()
     include("view/afficheActi.php");
     
 }
-/*function updUser()
-{
-    $user= $_POST["id"];
-    $nom = $_POST["nom"];
-    $mail = $_POST["mail"];
-    updateUsers($user, $nom, $mail);
-
-}
-
-function delUser()
-{
-    $user= $_POST["id"];
-    deleteUsers($user);
-}*/
 
 function getAllUsers()
 {
@@ -45,6 +31,7 @@ function getAllMedic()
 
 function getAllAct()
 {
+    
     $activity = selectAct();
     include("view/afficheActi.php");
 }

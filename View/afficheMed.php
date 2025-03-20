@@ -30,8 +30,8 @@ include('menu.php');
                         echo '<div class="col-md-4">';
                         echo '<div class="card mb-4 shadow-sm p-3">';
                         echo '<h5 class="card-title">' . $medicament["nom"] . '</h5>';
-                        echo '<p><strong>Effet Thérapeutique :</strong> ' . $medicament["effet_therapeutiques"] . '</p>';
-                        echo '<p><strong>Effet Secondaire :</strong> ' . $medicament["effet_secondaires"] . '</p>';
+                        echo '<p><strong>Effet Thérapeutique :</strong> ' . $medicament["effet_t"] . '</p>';
+                        echo '<p><strong>Effet Secondaire :</strong> ' . $medicament["effet_s"] . '</p>';
                         echo '</div>';
                         echo '</div>';
                     }
