@@ -65,7 +65,7 @@ include('menu.php');
 
     <!-- Footer -->
     <footer class="bg-light text-center p-3 mt-5">
-        <p>&copy; 2025 GSB. Projet MVC.</p>
+        <p>&copy; 2025 GSB. Projet Php.</p>
     </footer>
 
     <!-- Bootstrap JS -->
