@@ -10,6 +10,7 @@ function addUsers()
     include("view/afficheActi.php");
     
 }
+<<<<<<< HEAD
 
 function addAct()
 {
@@ -26,6 +27,8 @@ function addAct()
     
 }
 
+=======
+>>>>>>> 9226828fd66ed9be0e37d566224cf9df11734749
 
 function getAllUsers()
 {

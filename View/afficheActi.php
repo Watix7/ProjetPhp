@@ -72,11 +72,14 @@ include('menu.php');
                         <input type="email" class="form-control" id="email" name="mail" required>
                     </div>
 
+<<<<<<< HEAD
                     <div class="mb-3">
                         <label for="idA" class="form-label">idA :</label>
                         <input type="text" class="form-control" id="idA" name="idA" required>
                     </div>
 
+=======
+>>>>>>> 9226828fd66ed9be0e37d566224cf9df11734749
                     <button type="submit" class="btn w-100 text-white" style="background: linear-gradient(to right,rgb(78, 252, 43),rgb(5, 173, 240)); border: none;">
     Envoyer
 </button>
