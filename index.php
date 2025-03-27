@@ -17,6 +17,7 @@ if ( !isset($_GET["action"]) )
    else
    if ($_GET["action"] == 'in') {
       addUsers();
+      addAct();
    }
    else
    if ( $_GET["action"] )

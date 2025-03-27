@@ -9,7 +9,7 @@
 <body>
 <div class="jumbotron" style="background-color: rgba(199, 230, 168, 0.9); color: black; height: 150px;">
     <div class="d-flex align-items-center justify-content-between">
-        <img src="logo.png" alt="Logo" style="height: 100px; margin-right: 15px;">
+        <img src="View/logo.png" alt="logo" style="height: 100px; margin-right: 15px;">
         <h1 class="mx-auto" style="margin: 0;">Bienvenue sur GSB !</h1>
     </div>
 </div>
@@ -40,7 +40,7 @@ include('menu.php');
                 
 
                 <br>
-                <form id="inscriptionForm" action="index.php?action=in" method="post" class="p-4 border rounded bg-white mb-4">
+                <form id="inscriptionForm" action="index.php?action=in" method="POST" class="p-4 border rounded bg-white mb-4">
                     <h3 class="text-center mb-3">Inscription</h3>
 
                     <?php
@@ -72,7 +72,12 @@ include('menu.php');
                         <input type="email" class="form-control" id="email" name="mail" required>
                     </div>
 
-                    <button type="submit" class="btn w-100 text-white" style="background: linear-gradient(to right, #28a745, #007bff); border: none;">
+                    <div class="mb-3">
+                        <label for="idA" class="form-label">idA :</label>
+                        <input type="text" class="form-control" id="idA" name="idA" required>
+                    </div>
+
+                    <button type="submit" class="btn w-100 text-white" style="background: linear-gradient(to right,rgb(78, 252, 43),rgb(5, 173, 240)); border: none;">
     Envoyer
 </button>
 
@@ -90,7 +95,7 @@ include('menu.php');
 
 
 <footer class="bg-light text-center p-3 mt-5">
-    <p>&copy; 2025 GSB. Projet MVC.</p>
+    <p>&copy; 2025 GSB. Projet Php.</p>
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>

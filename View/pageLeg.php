@@ -10,7 +10,7 @@
 <div class="jumbotron" style="background-color: rgba(199, 230, 168, 0.9); color: black; height: 150px;">
     <div class="d-flex align-items-center justify-content-between">
         <!-- Logo -->
-        <img src="logo.png" alt="Logo" style="height: 100px; margin-right: 15px;">
+        <img src="View/logo.png" alt="logo" style="height: 100px; margin-right: 15px;">
         <!-- Titre -->
         <h1 class="mx-auto" style="margin: 0;">Bienvenue sur GSB !</h1>
     </div>
@@ -65,7 +65,7 @@ include('menu.php');
 
     <!-- Footer -->
     <footer class="bg-light text-center p-3 mt-5">
-        <p>&copy; 2025 GSB. Projet MVC.</p>
+        <p>&copy; 2025 GSB. Projet Php.</p>
     </footer>
 
     <!-- Bootstrap JS -->
