@@ -16,7 +16,7 @@ if ( !isset($_GET["action"]) )
       afficheJuridique();
    else
    if ($_GET["action"] == 'in') {
-      addUsers();
+      //addUsers();
       addAct();
    }
    else

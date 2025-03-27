@@ -77,18 +77,10 @@ function AddInscription()
     $nom = $_POST["nom"];
     $prenom = $_POST["prenom"]; 
     $mail = $_POST["mail"];
-<<<<<<< HEAD
     $idA = $_POST["idA"];
     date_default_timezone_set("UTC");
     $date = date("Y-m-d H:i:s");
-
-=======
-    date_default_timezone_set("UTC");
-    $date = date("Y-m-d H:i:s");
-    $idA = $_POST["idA"];
-
-    // Correction de la requête SQL (manquait une virgule)
->>>>>>> 9226828fd66ed9be0e37d566224cf9df11734749
+    
     $query = "INSERT INTO inscription(nom, prenom, mail, date_Ins, idA) VALUES('$nom', '$prenom', '$mail','$date','$idA')";
 
     $conn->query("SET NAMES UTF8");

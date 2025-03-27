@@ -19,7 +19,7 @@ function insertUser($nom ,$prenom, $mail)
 
 }
 
-<<<<<<< HEAD
+
 function insertAct($nom ,$prenom, $mail ,$date ,$idA)
 {
     $url = 'http://127.0.0.1/ProjetPhp/Api/api_activite.php';
@@ -39,8 +39,8 @@ function insertAct($nom ,$prenom, $mail ,$date ,$idA)
         return $result;
 
 }
-=======
->>>>>>> 9226828fd66ed9be0e37d566224cf9df11734749
+
+
 
 function selectUsers()
 {
