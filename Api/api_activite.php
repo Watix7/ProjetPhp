@@ -71,6 +71,7 @@ echo json_encode($response, JSON_PRETTY_PRINT);
 
 }
 
+
 function AddInscription()
 {
     global $conn;
@@ -80,7 +81,7 @@ function AddInscription()
     $idA = $_POST["idA"];
     date_default_timezone_set("UTC");
     $date = date("Y-m-d H:i:s");
-    
+
     $query = "INSERT INTO inscription(nom, prenom, mail, date_Ins, idA) VALUES('$nom', '$prenom', '$mail','$date','$idA')";
 
     $conn->query("SET NAMES UTF8");

@@ -4,20 +4,18 @@ $_request_method = $_SERVER["REQUEST_METHOD"];
 switch($_request_method)
 {
     case 'GET' : 
-        if(!empty($_GET["id"]))
-        {
+        if (!empty($_GET["id"])) {
             $id = intval($_GET["id"]);
             getMedic($id);
-        }
-        else
-        {
+        } 
+        else {
             getMedics();
         }
         break;
 
-    // case 'POST':
-    //     AddUsers();
-    //     break;
+     case 'POST':
+         getEffet();
+         break;
 
     // case 'PUT':
     //     $id = intval($_GET["id"]);
@@ -71,3 +69,22 @@ echo json_encode($response, JSON_PRETTY_PRINT);
 
 }
 
+function getEffet()
+{
+    global $conn;
+    $id1 = $_POST["id1"];
+    $id2 = $_POST["id2"];
+    $query = "SELECT * FROM interaction WHERE (id = '$id1' AND id_1 = '$id2') OR (id = '$id2' AND id_1 = '$id1');";
+    $response =array();
+
+    $conn->query("SET NAMES utf8");
+    $result= $conn ->query($query);
+    while ($row = $result->fetch())
+    {
+        $response[] = $row;
+    }
+    $result->closeCursor();
+    header('Content-Type: application/json');
+    echo json_encode($response, JSON_PRETTY_PRINT);
+
+}

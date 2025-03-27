@@ -20,6 +20,10 @@ if ( !isset($_GET["action"]) )
       addAct();
    }
    else
+   if ($_GET["action"] == 'ef') {
+      getEffet();
+   }
+   else
    if ( $_GET["action"] )
     getAllUsers();
  else

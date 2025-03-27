@@ -25,11 +25,15 @@ include('menu.php');
                 <h2 class="text-center mb-4">Liste des Médicaments</h2>
                 <?php
                     $string_decode = json_decode($medic, true);
+                    if ($string_decode === null) {
+                        echo "Erreur JSON : " . json_last_error_msg();
+                    }
                     echo '<div class="row">';
                     foreach ($string_decode as $medicament) {
                         echo '<div class="col-md-4">';
                         echo '<div class="card mb-4 shadow-sm p-3">';
                         echo '<h5 class="card-title">' . $medicament["nom"] . '</h5>';
+                        echo '<p><strong>Id Médicaments :</strong> ' . $medicament["id"] . '</p>';
                         echo '<p><strong>Effet Thérapeutique :</strong> ' . $medicament["effet_t"] . '</p>';
                         echo '<p><strong>Effet Secondaire :</strong> ' . $medicament["effet_s"] . '</p>';
                         echo '</div>';
@@ -37,32 +41,30 @@ include('menu.php');
                     }
                     echo '</div>';
                 ?>
-                <?php
-                    echo'<div class="flex-container">';
-                    $string_decode = json_decode($medic, true);
-                    echo '<select name="activity" id="activity" class="form-control">';
-                    echo '<option value="" disabled selected>Choisir un Medicament</option>'; // Option par défaut
 
-                    foreach ($string_decode as $medicament) {
-                        // On affiche l'ID de l'activité comme texte visible à côté du nom
-                        echo '<option value="' . $medicament["idA"] . '">' . $medicament["idA"] . ' - ' . $medicament["nom"] . '</option>';
-                    }
+                <form id="affichEffet" action="index.php?action=ef" method="POST" class="p-4 border rounded bg-white mb-4">
+                    <h3 class="text-center mb-3">Effet :</h3>
 
-                    echo '</select>';
-                    $string_decode = json_decode($medic, true);
-                    echo '<select name="activity" id="activity" class="form-control">';
-                    echo '<option value="" disabled selected>Choisir un Medicament</option>'; // Option par défaut
+                    <div class="mb-3">
+                        <label for="id1" class="form-label">Id Medic 1 :</label>
+                        <input type="text" class="form-control" id="id1" name="id1" required>
+                    </div>
 
-                    foreach ($string_decode as $medicament) {
-                        // On affiche l'ID de l'activité comme texte visible à côté du nom
-                        echo '<option value="' . $medicament["idA"] . '">' . $medicament["idA"] . ' - ' . $medicament["nom"] . '</option>';
-                    }
-                    echo'</div>';
-                    echo '</select>';
-                    ?>
-                <button type="submit" class="btn w-100 text-white" style="background: linear-gradient(to right,rgb(78, 252, 43),rgb(5, 173, 240)); border: none;">
-                    Voir les effets
-                </button>
+                    <div class="mb-3">
+                        <label for="id2" class="form-label">Id Medic 2 :</label>
+                        <input type="text" class="form-control" id="id2" name="id2" required>
+                    </div>
+
+                    <button type="submit" class="btn w-100 text-white" style="background: linear-gradient(to right,rgb(78, 252, 43),rgb(5, 173, 240)); border: none;">Voir les effets</button>
+                
+                </form>
+                
+                <div id="message" class="mt-3"></div>
+
+
+
+
+
                 <style>
                 .flex-container {
                 display: flex;

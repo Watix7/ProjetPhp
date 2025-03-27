@@ -43,7 +43,7 @@ function afficheJuridique()
 function getAllMedic()
 {
     $medic = selectUsers();
-    include("view/affichemed.php");
+    include("view/afficheMed.php");
 }
 
 function getAllAct()
@@ -52,4 +52,14 @@ function getAllAct()
     $activity = selectAct();
     include("view/afficheActi.php");
 }
+
+function getEffet()
+{   
+    $id1 = $_POST["id1"];
+    $id2 = $_POST["id2"];
+    selectEffet($id1,$id2);
+    $medic = selectUsers();
+    include("view/afficheMed.php");
+}
+
 ?>

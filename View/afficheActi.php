@@ -37,6 +37,7 @@ include('menu.php');
                         echo '<h5 class="card-title">' . $medicament["nom"] . '</h5>';
                         echo '<p><strong>Description :</strong> ' . $medicament["description"] . '</p>';
                         echo '<p><strong>Date :</strong> ' . $medicament["date_activite"] . '</p>';
+                        echo '<p><strong>Id :</strong> ' . $medicament["idA"] . '</p>';
                         echo '</div>';
                         echo '</div>';
                     }
@@ -48,7 +49,7 @@ include('menu.php');
                 <form id="inscriptionForm" action="index.php?action=in" method="POST" class="p-4 border rounded bg-white mb-4">
                     <h3 class="text-center mb-3">Inscription</h3>
 
-                    <?php
+                    <!--<?php/*
                     $string_decode = json_decode($activity, true);
                     echo '<select name="activity" id="activity" class="form-control">';
                     echo '<option value="" disabled selected>Choisir une activité</option>'; // Option par défaut
@@ -58,10 +59,13 @@ include('menu.php');
                         echo '<option value="' . $medicament["idA"] . '">' . $medicament["idA"] . ' - ' . $medicament["nom"] . '</option>';
                     }
 
-                    echo '</select>';
-                    ?>
+                    echo '</select>';*/
+                    ?>-->
+                    <div class="mb-3">
+                        <label for="idA" class="form-label">Id Activitées :</label>
+                        <input type="text" class="form-control" id="idA" name="idA" required>
+                    </div>
 
-                    <br>
                     <div class="mb-3">
                         <label for="nom" class="form-label">Nom :</label>
                         <input type="text" class="form-control" id="nom" name="nom" required>
@@ -77,10 +81,7 @@ include('menu.php');
                         <input type="email" class="form-control" id="email" name="mail" required>
                     </div>
 
-                    <div class="mb-3">
-                        <label for="idA" class="form-label">idA :</label>
-                        <input type="text" class="form-control" id="idA" name="idA" required>
-                    </div>
+                
 
                     <button type="submit" class="btn w-100 text-white" style="background: linear-gradient(to right,rgb(78, 252, 43),rgb(5, 173, 240)); border: none;">Envoyer</button>
 
