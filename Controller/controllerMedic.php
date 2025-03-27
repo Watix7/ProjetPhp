@@ -57,9 +57,12 @@ function getEffet()
 {   
     $id1 = $_POST["id1"];
     $id2 = $_POST["id2"];
-    selectEffet($id1,$id2);
+    
+    $effet = selectEffet($id1, $id2); 
     $medic = selectUsers();
+    
     include("view/afficheMed.php");
 }
+
 
 ?>

@@ -78,7 +78,7 @@ function selectEffet($id1 ,$id2)
     $options = array(
         'http' => array(
             'header' => "Content-type: application/x-www-form-urlencoded\r\n",
-            'method' => 'GET',
+            'method' => 'POST',
             'content' => http_build_query($data)
         )
         );

@@ -62,6 +62,25 @@ include('menu.php');
                 
                 <div id="message" class="mt-3"></div>
 
+                
+                <?php
+                if (isset($effet)) { 
+                    $effet_decode = json_decode($effet, true);
+
+                    if ($effet_decode === null) {
+                        echo "<p>Erreur JSON Effet : " . json_last_error_msg() . "</p>";
+                    } elseif (!empty($effet_decode)) { 
+                        echo "<h3 class='text-center mt-4'>Effets secondaires</h3>";
+                        echo "<ul class='list-group'>";
+                        foreach ($effet_decode as $e) {
+                            echo "<li class='list-group-item'>" . htmlspecialchars($e["effet"]) . "</li>";
+                        }
+                        echo "</ul>";
+                    }
+                } 
+                ?>
+
+
 
 
 
